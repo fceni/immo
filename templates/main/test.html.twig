@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>Bonjour {{ nameOfUser }}</h1>
+
+    <p> {{ myImmo.title }} : {{ myImmo.year }}</p>
+
+{% set name = "immobiliere " %}
+
+<h2> ANNONCE {{ name }}</h2>
+
+{% set colors = ['blue', 'red', 'green', 'yellow'] %}
+
+{% for color in colors %}
+   <div style="background-color: {{ color }}"> {{ color }}</div>
+{% endfor %}
+
+{% set immo = {
+    title:"Maison",
+    year: 2015
+}
+%}
+
+<h3>Title : {{ immo.title }}</h3>
+
+{% for key, val in immo %}
+    <p>{{ key }} : {{ val }}</p>
+{% endfor %}
+
+<h3>Filtres</h3>
+<div> </div>
+
+{% endblock %}
+
+{% block title %}
+    {{ parent() }} | Test
+{% endblock %}
