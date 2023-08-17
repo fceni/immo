@@ -44,11 +44,13 @@
 
 
     <body>
+    <title>Compte à Rebours d'un Mois</title>
+    <br>
     <div class="countdown">
         <span id="days">00</span> jours
         <span id="hours">00</span> heures
         <span id="minutes">00</span> minutes
-        <span id="seconds">00</span> secondes
+
 {#        {{ interval.format('%m mois,%d jours, %h heures, %i minutes, %s secondes') }}#}
 
     </div>
@@ -61,21 +63,27 @@
             <source src="video1.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la vidéo.
         </video>
+        <br>
         <button class="btn-vote" onclick="vote('video1')">Votez pour la vidéo 1</button>
+        <p>texte</p>
     </div>
     <div class="video-container">
         <video class="video" controls>
             <source src="video2.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la vidéo.
         </video>
+        <br>
         <button class="btn-vote" onclick="vote('video2')">Votez pour la vidéo 2</button>
+        <p>Texte</p>
     </div>
     <div class="video-container">
         <video class="video" controls>
             <source src="video3.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la vidéo.
         </video>
+        <br>
         <button class="btn-vote" onclick="vote('video3')">Votez pour la vidéo 3</button>
+        <p>Texte</p>
     </div>
     <script>
         let voted = false;
