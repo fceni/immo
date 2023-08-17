@@ -52,6 +52,24 @@ body {
     cursor: pointer;
 }
 
+.progress-container{
+    margin-top: 20px;
+}
+
+.progress-bar{
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-inner{
+    height: 100px;
+    width: 0;
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
 
 
 .flex_div{

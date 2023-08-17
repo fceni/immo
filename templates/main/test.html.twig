@@ -65,8 +65,17 @@
         </video>
         <br>
         <button class="btn-vote" onclick="vote('video1')">Votez pour la vidéo 1</button>
+{#        <div class="=progress" role="progressbar" aria-label="Exemple with label" aria-valuenow=#}
+{#                <div class="progress-bar" style="width: 25%">25%</div#}
+{#    </div>#}
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-bar-inner"></div>
+        </div>
+    </div>
         <p>texte</p>
     </div>
+
     <div class="video-container">
         <video class="video" controls>
             <source src="video2.mp4" type="video/mp4">
@@ -76,6 +85,7 @@
         <button class="btn-vote" onclick="vote('video2')">Votez pour la vidéo 2</button>
         <p>Texte</p>
     </div>
+
     <div class="video-container">
         <video class="video" controls>
             <source src="video3.mp4" type="video/mp4">
