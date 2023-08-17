@@ -50,11 +50,14 @@
         <span id="days">00</span> jours
         <span id="hours">00</span> heures
         <span id="minutes">00</span> minutes
-
+    </div>
 {#        {{ interval.format('%m mois,%d jours, %h heures, %i minutes, %s secondes') }}#}
 
-    </div>
-    <script src="{{ asset('script.js') }}"></script>
+{#    </div>#}
+{#    <div class="countdown">#}
+{#        {{ interval.format('%m mois, %d jours, %h heures') }}#}
+{#    </div>#}
+   <script src="{{ asset('script.js') }}"></script>
 
     <br>
     <br>
@@ -65,9 +68,6 @@
         </video>
         <br>
         <button class="btn-vote" onclick="vote('video1')">Votez pour la vidéo 1</button>
-{#        <div class="=progress" role="progressbar" aria-label="Exemple with label" aria-valuenow=#}
-{#                <div class="progress-bar" style="width: 25%">25%</div#}
-{#    </div>#}
     <div class="progress-container">
         <div class="progress-bar">
             <div class="progress-bar-inner"></div>
