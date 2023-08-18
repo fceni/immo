@@ -31,6 +31,23 @@ class MainController extends AbstractController
             ]);
 
     }
+
+    #[Route('/add', name: 'main_add')]
+    public function add(EntityManagerInterface $entityManager): Response
+    {
+        $vote = new vote();
+        $vote
+            ->setBackdrop('backdrop.png')
+            ->setDateCreated(\DateTime());
+
+        $entityManager->persist($vote);
+        $entityManager->flush();
+
+        dump($vote);
+
+        return $this->render("main/add.html.twig");
+    }
+
 //
 //    #[Route('/main', name: 'main')]
 //    public function index(): Response
