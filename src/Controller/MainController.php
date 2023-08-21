@@ -32,24 +32,34 @@ class MainController extends AbstractController
 
     }
 
-    #[Route('/add', name: 'main_add')]
+ 
+
+
+    #[Route('/main', name: 'main')]   #[Route('/add', name: 'main_add')]
     public function add(EntityManagerInterface $entityManager): Response
     {
-        $vote = new vote();
+        $vote = new Vote();
         $vote
+            ->setName('Videoludique')
             ->setBackdrop('backdrop.png')
             ->setDateCreated(\DateTime());
 
         $entityManager->persist($vote);
         $entityManager->flush();
 
-        dump($vote);
 
         return $this->render("main/add.html.twig");
     }
 
-//
-//    #[Route('/main', name: 'main')]
+
+    #[Route('/update', name: 'main_update')]
+    public function update(int $id, voteRepository $voteRepository)
+    {
+        $vote = $voteRepository->find($id);
+
+        return $this->render("main/update.html.twig");
+    }
+
 //    public function index(): Response
 //    {
 //        $now = new \DateTime();
