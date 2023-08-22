@@ -16,21 +16,13 @@ class Video
     #[ORM\Column(length: 255)]
     private ?string $titre = null;
 
-    #[ORM\ManyToOne]
+    #[ORM\ManyToOne(inversedBy: 'videos')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Vote $votes = null;
+    private ?Sondage $sondage = null;
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
     private ?Sondage $sondages = null;
-
-    #[ORM\ManyToOne(inversedBy: 'videos')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Vote $vote = null;
-
-    #[ORM\ManyToOne(inversedBy: 'videos')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Sondage $sondage = null;
 
     public function getId(): ?int
     {
@@ -49,14 +41,14 @@ class Video
         return $this;
     }
 
-    public function getVotes(): ?Vote
+    public function getSondage(): ?Sondage
     {
-        return $this->votes;
+        return $this->sondage;
     }
 
-    public function setVotes(?Vote $votes): self
+    public function setSondage(?Sondage $sondage): self
     {
-        $this->votes = $votes;
+        $this->sondage = $sondage;
 
         return $this;
     }
@@ -69,30 +61,6 @@ class Video
     public function setSondages(?Sondage $sondages): self
     {
         $this->sondages = $sondages;
-
-        return $this;
-    }
-
-    public function getVote(): ?Vote
-    {
-        return $this->vote;
-    }
-
-    public function setVote(?Vote $vote): self
-    {
-        $this->vote = $vote;
-
-        return $this;
-    }
-
-    public function getSondage(): ?Sondage
-    {
-        return $this->sondage;
-    }
-
-    public function setSondage(?Sondage $sondage): self
-    {
-        $this->sondage = $sondage;
 
         return $this;
     }
