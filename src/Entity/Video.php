@@ -20,9 +20,9 @@ class Video
     #[ORM\JoinColumn(nullable: false)]
     private ?Sondage $sondage = null;
 
-    #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Sondage $sondages = null;
+//    #[ORM\ManyToOne]
+//    #[ORM\JoinColumn(nullable: false)]
+//    private ?Sondage $sondages = null;
 
     public function getId(): ?int
     {
@@ -53,15 +53,15 @@ class Video
         return $this;
     }
 
-    public function getSondages(): ?Sondage
-    {
-        return $this->sondages;
-    }
-
-    public function setSondages(?Sondage $sondages): self
-    {
-        $this->sondages = $sondages;
-
-        return $this;
-    }
+//    public function getSondages(): ?Sondage
+//    {
+//        return $this->sondages;
+//    }
+//
+//    public function setSondages(?Sondage $sondages): self
+//    {
+//        $this->sondages = $sondages;
+//
+//        return $this;
+//    }
 }

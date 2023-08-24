@@ -1,3 +1,20 @@
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkviolet;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+
+.home-button:hover {
+    background-color: violet;
+}
+
+
+
 
 .video-container {
     display: inline-block;
